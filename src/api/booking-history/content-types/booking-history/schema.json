@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "booking_histories",
+  "info": {
+    "singularName": "booking-history",
+    "pluralName": "booking-histories",
+    "displayName": "BookingHistory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Price": {
+      "type": "biginteger"
+    },
+    "Price_VAT": {
+      "type": "biginteger"
+    },
+    "Total_price": {
+      "type": "biginteger"
+    },
+    "User_name": {
+      "type": "string"
+    },
+    "Note": {
+      "type": "richtext"
+    },
+    "Phone_number": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "string"
+    },
+    "Room": {
+      "type": "string"
+    },
+    "Method_of_payment": {
+      "type": "string"
+    },
+    "Start_time": {
+      "type": "decimal"
+    },
+    "End_time": {
+      "type": "decimal"
+    },
+    "Total_time": {
+      "type": "decimal"
+    },
+    "Code": {
+      "type": "string"
+    },
+    "Date": {
+      "type": "string"
+    },
+    "Status": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "booking_histories"
+    },
+    "Email": {
+      "type": "email"
+    }
+  }
+}
